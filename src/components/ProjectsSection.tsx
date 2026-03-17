@@ -58,8 +58,8 @@ const ProjectsSection = () => (
                 {/* Terminal header */}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="w-2.5 h-2.5 rounded-full bg-destructive/60" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary/40" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-accent/60" />
                   <span className="font-mono text-xs text-muted-foreground ml-2">
                     {p.title.toLowerCase().replace(/\s+/g, "_")}.py
                   </span>
