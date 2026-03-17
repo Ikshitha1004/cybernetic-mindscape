@@ -5,7 +5,7 @@ const experiences = [
     role: "Software Engineer",
     company: "IBM",
     period: "Current",
-    description: "Building scalable distributed systems and cloud-native applications.",
+    description: "Working on VPC architecture & CI/CD automation. Building scalable distributed systems & cloud-native applications.",
     active: true,
   },
   {

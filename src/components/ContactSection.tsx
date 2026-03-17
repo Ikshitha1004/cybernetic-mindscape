@@ -1,10 +1,23 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const handleSubmit = (e: React.FormEvent) => {
+            e.preventDefault();
 
+            const subject = "Portfolio Contact";
+            const body = `
+          Name: ${form.name}
+          Email: ${form.email}
+          Message: ${form.message}
+            `;
+
+            window.location.href = `mailto:ikshi.thaj0477@gmail.com?subject=${encodeURIComponent(
+              subject
+            )}&body=${encodeURIComponent(body)}`;
+  };
   return (
     <section id="contact" className="py-[20vh] relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,9 +45,9 @@ const ContactSection = () => {
 
             <div className="flex gap-4 mt-8">
               {[
-                { Icon: Github, href: "#" },
-                { Icon: Linkedin, href: "#" },
-                { Icon: Mail, href: "#" },
+                { Icon: Github, href: "https://github.com/ikshitha1004/" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/ikshitha-janarthanan/" },
+                { Icon: Twitter, href: "https://x.com/Ikshitha121244" },
               ].map(({ Icon, href }) => (
                 <a
                   key={Icon.displayName}
@@ -53,7 +66,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-6"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             {(["name", "email", "message"] as const).map((field) => (
               <div key={field}>
