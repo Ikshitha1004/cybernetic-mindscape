@@ -40,7 +40,7 @@ const projects: Project[] = [
     image: dfm,
     tags: ["YOLOv11", "ultralytics","Deep Learning", "PyTorch"],
     description:
-      "A data pipeline analyzing Chandrayaan-2 XRF data to map 40% of the moon's surface and study lunar mineralogy at unprecedented resolution.",
+      "A foundation model for drone imagery trained across tasks like object detection and segmentation.",
     github: "https://github.com/Error-404-NotFound/CS518L-Deep-Learning-Project",
     live: "#",
     color: "primary",
